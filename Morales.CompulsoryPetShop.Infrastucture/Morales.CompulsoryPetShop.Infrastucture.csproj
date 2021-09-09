@@ -1,14 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Morales.CompulsoryPetShop.Core\Morales.CompulsoryPetShop.Core.csproj" />
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Domain\Morales.CompulsoryPetShop.Domain.csproj" />
-      <ProjectReference Include="..\Morales.CompulsoryPetShop.Infrastucture\Morales.CompulsoryPetShop.Infrastucture.csproj" />
     </ItemGroup>
 
     <ItemGroup>
