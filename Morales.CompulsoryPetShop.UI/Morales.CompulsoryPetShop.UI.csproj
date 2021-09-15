@@ -8,6 +8,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Core\Morales.CompulsoryPetShop.Core.csproj" />
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Domain\Morales.CompulsoryPetShop.Domain.csproj" />
+      <ProjectReference Include="..\Morales.CompulsoryPetShop.EntityFramework\Morales.CompulsoryPetShop.EntityFramework.csproj" />
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Infrastucture\Morales.CompulsoryPetShop.Infrastucture.csproj" />
     </ItemGroup>
 

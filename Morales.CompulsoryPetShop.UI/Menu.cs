@@ -11,11 +11,13 @@ namespace Morales.CompulsoryPetShop.UI
     {
         private IPetService _petService;
         private IPetTypeRepository _petTypeRepository;
+        private IOwnerService _ownerService;
 
         public Menu(IPetService service, IPetTypeRepository typeRepo)
         {
             _petService = service;
             _petTypeRepository = typeRepo;
+            
         }
 
         public void Start()
@@ -64,6 +66,18 @@ namespace Morales.CompulsoryPetShop.UI
                     case 7:
                         ShowCheapestPet();
                         break;
+                    //Show Owner
+                    case 8:
+                        ReadAllOwner();
+                        break;
+                    //Create Owner
+                    case 9:
+                        CreateOwner();
+                        break;
+                    //Update Owner
+                    case 10:
+                        UpdateOwner();
+                        break;
                     //Exit petshop
                     case 0:
                         break;
@@ -75,6 +89,44 @@ namespace Morales.CompulsoryPetShop.UI
                         break;
                 }
             }
+        }
+
+        private void UpdateOwner()
+        {
+            ReadAllOwner();
+            Print(StringConstans.SelectOwnerToUpdate);
+            var owner = _ownerService.ReadByOwnerId(GetMainMenuSelection());
+            Print($"Old name: {owner.Name} - enter new name:");
+            var name = Console.ReadLine();
+            
+            _ownerService.UpdateOwner(new Owner()
+            {
+                Id = owner.Id,
+                Name = name,
+            });
+        }
+
+        private void CreateOwner()
+        {
+            Print(StringConstans.CreateOwnerText);
+            Print(StringConstans.CreateOwnerName);
+            var name = Console.ReadLine();
+            
+            _ownerService.CreateOwner(new Owner()
+            {
+                Name = name,
+            });
+        }
+
+
+        private void ReadAllOwner()
+        {
+           Print("Here are All Owner");
+           var owners = _ownerService.ReadAllOwner();
+           foreach (var owner in owners)
+           {
+               Print($"{owner.Id} - {owner.Name}");
+           }
         }
 
         private void CreatePet()
@@ -218,6 +270,8 @@ namespace Morales.CompulsoryPetShop.UI
             Print(StringConstans.UpdatePetMenuMessage);
             Print(StringConstans.SortPetsByPriceMessage);
             Print(StringConstans.ShowCheapestPetsMenuMessage);
+            Print(StringConstans.ShowOwnerMenuMessage);
+            Print(StringConstans.CreateOwnerMenuMessage);
         }
 
         private void PrintNewLine()

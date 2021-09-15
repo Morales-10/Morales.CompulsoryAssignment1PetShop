@@ -20,6 +20,10 @@ namespace Morales.CompulsoryPetShop.UI
         public static string CreatePetText = " Create a new Pet";
         public static string CreatePetName = "Enter the name of your pet:";
         public static string ErrorMessage =" Invalid input - press 0-7";
-    
+        public static string CreateOwnerText = "Create a Owner";
+        public static string CreateOwnerName = "Enter the name of the owner";
+        public static string CreateOwnerMenuMessage = "Press 9 to create a owner";
+        public static string ShowOwnerMenuMessage = "Press 8 to See a List of all owner";
+        public static string SelectOwnerToUpdate = "Select the Id of the Owner you want to update";
     }
 }
