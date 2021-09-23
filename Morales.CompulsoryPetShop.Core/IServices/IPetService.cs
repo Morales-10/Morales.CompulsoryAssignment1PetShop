@@ -11,7 +11,11 @@ namespace Morales.CompulsoryPetShop.Core.IServices
         Pet ReadByPetId(int id);
 
         List<Pet> ReadAllPets();
-        
+
+        Pet Create(Pet pet);
+        object GetById(int id);
+        void Delete(int id);
+        void UpdatePetName(int id, string name);
     }
     
 }

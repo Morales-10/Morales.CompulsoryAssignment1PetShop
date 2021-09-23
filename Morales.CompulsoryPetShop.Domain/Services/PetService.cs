@@ -40,5 +40,25 @@ namespace Morales.CompulsoryPetShop.Domain.Services
         {
             return _petRepository.ReadAllPets();
         }
+
+        public Pet Create(Pet pet)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public object GetById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdatePetName(int id, string name)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

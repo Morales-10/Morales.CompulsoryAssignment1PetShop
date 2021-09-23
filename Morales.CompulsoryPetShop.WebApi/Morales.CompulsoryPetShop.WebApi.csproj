@@ -1,21 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.10" />
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
+    </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Core\Morales.CompulsoryPetShop.Core.csproj" />
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Domain\Morales.CompulsoryPetShop.Domain.csproj" />
       <ProjectReference Include="..\Morales.CompulsoryPetShop.EntityFramework\Morales.CompulsoryPetShop.EntityFramework.csproj" />
       <ProjectReference Include="..\Morales.CompulsoryPetShop.Infrastucture\Morales.CompulsoryPetShop.Infrastucture.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.10" />
-      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
     </ItemGroup>
 
 </Project>

@@ -1,18 +1,25 @@
 using Microsoft.EntityFrameworkCore;
-using Morales.CompulsoryPetShop.Core.Models;
 using Morales.CompulsoryPetShop.EntityFramework.Entities;
 
 namespace Morales.CompulsoryPetShop.EntityFramework
 {
     public class PetShopDbContext : DbContext
     {
-        public PetShopDbContext(DbContextOptions<PetShopDbContext> options) : base(options) {}
+        public PetShopDbContext(DbContextOptions<PetShopDbContext> options) : base(options){}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<InsuranceEntity>().HasData(new InsuranceEntity {id = 1, Name = "Buzz", Price = 10});
-            modelBuilder.Entity<InsuranceEntity>().HasData(new InsuranceEntity {id = 2, Name = "Woody", Price = 23});
-            modelBuilder.Entity<InsuranceEntity>().HasData(new InsuranceEntity {id = 3, Name = "Rex", Price = 42});
+            modelBuilder.Entity<PetEntity>()
+                .HasOne(petEntity => petEntity.Insurance)
+                .WithMany();
+            
+            modelBuilder.Entity<InsuranceEntity>().HasData(new InsuranceEntity {Id = 1, Name = "Woody", Price = 34});
+            modelBuilder.Entity<InsuranceEntity>().HasData(new InsuranceEntity {Id = 2, Name = "Buzz", Price = 42});
+            modelBuilder.Entity<InsuranceEntity>().HasData(new InsuranceEntity {Id = 3, Name = "Rex", Price = 24});
         }
-        public DbSet<InsuranceEntity> Insurances { get; set; }
+        
+        public DbSet<PetEntity> Pet { get; set; }
+        public DbSet<InsuranceEntity> Insurances { get; set;}
+     
     }
 }

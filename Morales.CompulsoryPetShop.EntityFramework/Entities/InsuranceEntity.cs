@@ -1,11 +1,14 @@
-using System;
+using System.Collections.Generic;
 
 namespace Morales.CompulsoryPetShop.EntityFramework.Entities
 {
     public class InsuranceEntity
     {
-        public int id { get; set; }
-        public String Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public double Price { get; set; }
+
+        public List<PetEntity> Pets { get; set; }
+        
     }
 }

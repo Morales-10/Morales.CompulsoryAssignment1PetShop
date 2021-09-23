@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morales.CompulsoryPetShop.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morales.CompulsoryPetShop.Domain", "Morales.CompulsoryPetShop.Domain\Morales.CompulsoryPetShop.Domain.csproj", "{AD0F04D8-11E5-4F22-BD34-5F902A94208E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morales.CompulsoryPetShop.WebApi", "Morales.CompulsoryPetShop.WebApi\Morales.CompulsoryPetShop.WebApi.csproj", "{8F3A5775-DA25-4FFE-AC0B-EC8033DA4A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morales.CompulsoryPetShop.EntityFramework", "Morales.CompulsoryPetShop.EntityFramework\Morales.CompulsoryPetShop.EntityFramework.csproj", "{810C5E21-6849-4234-AAE8-17A86E4B3072}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,11 +40,21 @@ Global
 		{AD0F04D8-11E5-4F22-BD34-5F902A94208E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0F04D8-11E5-4F22-BD34-5F902A94208E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0F04D8-11E5-4F22-BD34-5F902A94208E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3A5775-DA25-4FFE-AC0B-EC8033DA4A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3A5775-DA25-4FFE-AC0B-EC8033DA4A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3A5775-DA25-4FFE-AC0B-EC8033DA4A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3A5775-DA25-4FFE-AC0B-EC8033DA4A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810C5E21-6849-4234-AAE8-17A86E4B3072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810C5E21-6849-4234-AAE8-17A86E4B3072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810C5E21-6849-4234-AAE8-17A86E4B3072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810C5E21-6849-4234-AAE8-17A86E4B3072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{78BC619B-53CB-4304-92AC-7A8CEFCA8B46} = {34E9414D-D71B-4CFE-A8C4-6D00A382C65E}
 		{DF15618B-C99A-4235-A0F7-95996FFFDEE7} = {3CD5EFC3-3BB7-41B2-9C86-5DE9DF9430CC}
 		{EC6BF4CC-C376-4D36-9AF9-4632CF78C40A} = {40BAC3F3-C7C1-4448-9DBA-A4730C414C99}
 		{AD0F04D8-11E5-4F22-BD34-5F902A94208E} = {40BAC3F3-C7C1-4448-9DBA-A4730C414C99}
+		{8F3A5775-DA25-4FFE-AC0B-EC8033DA4A31} = {3CD5EFC3-3BB7-41B2-9C86-5DE9DF9430CC}
+		{810C5E21-6849-4234-AAE8-17A86E4B3072} = {34E9414D-D71B-4CFE-A8C4-6D00A382C65E}
 	EndGlobalSection
 EndGlobal
