@@ -5,9 +5,9 @@ namespace Morales.CompulsoryPetShop.Core.IServices
 {
     public interface IPetTypeService
     {
-        PetType CreatePetType(PetType pet);
+        PetType CreatePetType(PetType petType);
         PetType RemovePetType(int id);
-        PetType UpdatePetType(PetType pet);
+        PetType UpdatePetType(PetType petType);
         PetType ReadById(int id);
 
         List<PetType> ReadAllPetTypes();

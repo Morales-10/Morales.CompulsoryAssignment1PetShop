@@ -146,7 +146,6 @@ namespace Morales.CompulsoryPetShop.UI
             {
                 Birthdate = birthDate,
                 Color = color,
-                Id = null,
                 Name = name,
                 Price = price,
                 SoldDate = soldDate,

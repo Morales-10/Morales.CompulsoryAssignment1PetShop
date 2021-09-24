@@ -20,7 +20,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
         {
             return _context.Pet.Select(pet => new Pet
                 {
-                    Id = pet.id,
+                    Id = pet.Id,
                     Name = pet.Name,
                     Birthdate = pet.BirthDate,
                     SoldDate = pet.SoldDate,
@@ -37,7 +37,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
         {
             var beforeSaveEntity = new PetEntity()
             {
-                id = pet.Id,
+                Id = pet.Id,
                 Name = pet.Name,
                 BirthDate = pet.Birthdate,
                 SoldDate = pet.SoldDate,
@@ -48,7 +48,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
             _context.SaveChanges();
             return new Pet()
             {
-                Id = afterSaveEntity.id,
+                Id = afterSaveEntity.Id,
                 Name = afterSaveEntity.Name,
                 Birthdate = afterSaveEntity.BirthDate,
                 SoldDate = afterSaveEntity.SoldDate,
@@ -59,7 +59,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
 
         public Pet RemovePet(int id)
         {
-            _context.Pet.Remove(new PetEntity {id = id});
+            _context.Pet.Remove(new PetEntity {Id = id});
             _context.SaveChanges();
             return new Pet
             {
@@ -71,7 +71,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
         {
             var petEntity = new PetEntity
             {
-                id = pet.Id,
+                Id = pet.Id,
                 Name = pet.Name,
                 BirthDate = pet.Birthdate,
                 SoldDate = pet.SoldDate,
@@ -82,7 +82,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
             _context.SaveChanges();
             return new Pet
             {
-                Id = entity.id,
+                Id = entity.Id,
                 Name = entity.Name,
                 Birthdate = entity.BirthDate,
                 SoldDate = entity.SoldDate,
@@ -97,7 +97,7 @@ namespace Morales.CompulsoryPetShop.EntityFramework.Repositories
             return _context.Pet
                 .Select(pe => new Pet
                 {
-                    Id = pe.id,
+                    Id = pe.Id,
                     Name = pe.Name,
                     Birthdate = pe.BirthDate,
                     SoldDate = pe.SoldDate,

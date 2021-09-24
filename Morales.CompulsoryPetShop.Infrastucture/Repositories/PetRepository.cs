@@ -57,6 +57,7 @@ namespace Morales.CompulsoryPetShop.Infrastucture.Repositories
         
         public Pet CreatePet(Pet pet)
         {
+            pet.Id = _id++;
             _petTable.Add(pet);
             return pet;
         }

@@ -46,7 +46,7 @@ namespace Morales.CompulsoryPetShop.WebApi.Controllers
             _petService.Delete(id);
         }
 
-        [HttpPatch]
+        [HttpPut]
         public void UpdatePetName(int id, string name)
         {
             _petService.UpdatePetName(id, name);
